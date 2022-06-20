@@ -68,3 +68,11 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+Have you ever not known what you want to cook?  Have you ever wondered what the random ingredients in your fridge could combine into?  Have you ever looked at a bag of broccoli in your fridge that is about to go bad and thought what would go well with this?  Well, we have a perfect website for you. 
+ TheWanderingChef is an website that caters to budding chefs, avid cookers, and even those who dread cooking.  We will display recipes for your convenience to simply browse if you are hungry yet clueless on what you want.  If you have a certain craving but don't know how to prepare it, no worries you can search for it.  Have you ever wondered how healthy your own creations are, TheWanderingChef will tell you.   This one stop shop will solve all the thinking and browsing of what to cook, how to cook it, and what ingredients you need for you.  Just stroll on over to TheWanderingChef and we will assist you with all your culinary needs.  Website soon to come!
+
+As a user I want to be able to browse recipes with a search and filter options.
+As a user I want to be able to add recipes to a list so that I can view them later. (favs)
+As a user I want to be able to upload my own recipe and if possible see the nutritional information about it.
+ 
