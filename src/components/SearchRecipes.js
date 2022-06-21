@@ -1,6 +1,6 @@
 import React from "react";
 
-function Search() {
+function SearchRecipes() {
   return (
     <div id="search-container">
       <div id="dropdown" className="filter">
@@ -19,4 +19,4 @@ function Search() {
   );
 }
 
-export default Search;
+export default SearchRecipes;
