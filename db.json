@@ -1,0 +1,13 @@
+{
+  "recipes": [
+    {
+      "description": "TEST",
+      "name": "TEST",
+      "image": "TEST",
+      "ingredients": "TEST",
+      "season": "TEST",
+      "category": "TEST",
+      "id": 1
+    }
+  ]
+}
