@@ -1,14 +1,88 @@
-import React from "react"
+import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
+import "./NavBar.css";
 
 function NavBar() {
-    return(
-        <div id="nav-container">
-            <button className="nav-btn">Home</button>
-            <button className="nav-btn">Favorites</button>
-            <button className="nav-btn">Create</button>
-            <button className="nav-btn">Misc.</button>
-        </div>
-    )
-}
+    const [click, setClick] = useState(false);
+    const handleClick = () => setClick(!click);
 
-export default NavBar
+    return (
+      <>
+        <nav className="navbar">
+          <div className="nav-container">
+            <NavLink exact to="/" className="nav-logo">
+              The Wandering Chef
+              <i className="fas fa-code"></i>
+            </NavLink>
+  
+            <ul className={click ? "nav-menu active" : "nav-menu"}>
+              <li className="nav-item">
+                <NavLink
+                  exact
+                  to="/"
+                  activeClassName="active"
+                  className="nav-links"
+                  onClick={handleClick}
+                >
+                  Home
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink
+                  exact
+                  to="/favorites"
+                  activeClassName="active"
+                  className="nav-links"
+                  onClick={handleClick}
+                >
+                  Favorites
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink
+                  exact
+                  to="/create"
+                  activeClassName="active"
+                  className="nav-links"
+                  onClick={handleClick}
+                >
+                  Create
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink
+                  exact
+                  to="/seasonal"
+                  activeClassName="active"
+                  className="nav-links"
+                  onClick={handleClick}
+                >
+                  Seasonal
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink
+                  exact
+                  to="/myrecipes"
+                  activeClassName="active"
+                  className="nav-links"
+                  onClick={handleClick}
+                >
+                  My Recipes
+                </NavLink>
+              </li>
+              <li className="nav-item" id="search-box">
+                <label id="search-label" htmlFor="search">Search: </label>
+                <input type="text" placeholder="Type to search..." />
+              </li>
+            </ul>
+            <div className="nav-icon" onClick={handleClick}>
+              <i className={click ? "fas fa-times" : "fas fa-bars"}></i>
+            </div>
+          </div>
+        </nav>
+      </>
+    );
+  }
+  
+  export default NavBar;
