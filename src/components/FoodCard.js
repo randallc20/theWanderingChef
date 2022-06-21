@@ -1,10 +1,17 @@
 import React from "react";
+import Card from "react-bootstrap/Card";
+import Button from "react-bootstrap/Button";
 
-function FoodCard() {
+function FoodCard({ image, name, ingredients }) {
   return (
-    <div id="food-card">
-      <h1>Food Card</h1>
-    </div>
+    <Card style={{ width: "18rem" }}>
+      <Card.Img variant="top" src={image} />
+      <Card.Body>
+        <Card.Title>{name}</Card.Title>
+        <Card.Text>{ingredients}</Card.Text>
+        <Button variant="primary">Recipe</Button>
+      </Card.Body>
+    </Card>
   );
 }
 
