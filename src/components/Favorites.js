@@ -1,8 +1,9 @@
 import React from "react";
+import FoodCard from "./FoodCard";
 
 function Favorites(){
     return(
-        <h1>Favorites</h1>
+        <h1>If starred, place card here!</h1>
     )
 }
 
