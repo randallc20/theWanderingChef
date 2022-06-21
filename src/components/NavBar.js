@@ -52,17 +52,6 @@ function NavBar() {
               <li className="nav-item">
                 <NavLink
                   exact
-                  to="/seasonal"
-                  activeClassName="active"
-                  className="nav-links"
-                  onClick={handleClick}
-                >
-                  Seasonal
-                </NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink
-                  exact
                   to="/myrecipes"
                   activeClassName="active"
                   className="nav-links"

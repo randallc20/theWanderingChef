@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Search from "./Search";
+import SearchRecipes from "./SearchRecipes";
 import FoodList from "./FoodList";
 
 function Home() {
@@ -19,7 +19,7 @@ function Home() {
 
   return (
     <div>
-      <Search />
+      <SearchRecipes />
       <FoodList foods={foods} />
     </div>
   );
