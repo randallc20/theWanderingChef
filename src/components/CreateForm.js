@@ -35,8 +35,9 @@ function CreateForm() {
         <div className="ui divider"></div>
         <div className="ui form">
           <div className="field">
-            <label>Name</label>
+            <label className='form-label' >Name</label>
             <input
+              className='form-input'
               type="text"
               id="name"
               name="name"
@@ -45,8 +46,9 @@ function CreateForm() {
             />
           </div>
           <div className="field">
-            <label>Description</label>
+            <label className='form-label' >Description</label>
             <input
+              className='form-input'
               type="text"
               id="description"
               name="description"
@@ -55,8 +57,9 @@ function CreateForm() {
             />
           </div>
           <div className="field">
-            <label>Ingredients</label>
+            <label className='form-label' >Ingredients</label>
             <input
+              className='form-input'
               type="text"
               id="ingredients"
               name="ingredients"
@@ -65,8 +68,9 @@ function CreateForm() {
             />
           </div>
           <div className="field">
-            <label>Image</label>
+            <label className='form-label' >Image</label>
             <input
+             className='form-input'
               type="text"
               id="image"
               name="image"
@@ -75,8 +79,9 @@ function CreateForm() {
             />
           </div>
           <div className="field">
-            <label>Season</label>
+            <label className='form-label' >Season</label>
             <input
+             className='form-input'
               type="text"
               id="season"
               name="season"
@@ -85,8 +90,9 @@ function CreateForm() {
             />
           </div>
           <div className="field">
-            <label>Category</label>
+            <label className='form-label' >Category</label>
             <input
+             className='form-input'
               type="text"
               id="category"
               name="category"
@@ -94,7 +100,7 @@ function CreateForm() {
               onChange={(e) => setCategory(e.target.value)}
             />
           </div>
-          <button>Submit</button>
+          <button id="form-btn">Submit</button>
         </div>
       </form>
     </div>
