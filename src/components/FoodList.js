@@ -3,7 +3,10 @@ import FoodCard from "./FoodCard";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 
-function FoodList({ foods, onCardChange, onStarClick, toggle }) {
+
+function FoodList({ foods, onCardChange }) {
+  //console.log(foods);
+
   const foodInfo = foods.map((food) => {
     return (
       <FoodCard
