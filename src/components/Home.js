@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import FoodList from "./FoodList";
 
+
 function Home({foods, onCardChange, setQuery}) {
   const [search, setSearch] = useState("");
 
@@ -24,6 +25,7 @@ function Home({foods, onCardChange, setQuery}) {
     </form>
 
     <div>
+
       <FoodList foods={foods} onCardChange={onCardChange} />
     </div>
     </>
