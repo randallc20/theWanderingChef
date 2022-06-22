@@ -1,8 +1,7 @@
 import React, {useState, useEffect} from 'react'
-import FoodCard from "./FoodCard";
+import MyRecipeCard from './MyRecipeCard';
 import Container from "react-bootstrap/Container";
 import Row from 'react-bootstrap/Row';
-import Favorites from './Favorites';
 
 function MyRecipes() {
   const[myRecipies, setMyRecipes] = useState([])
@@ -14,8 +13,9 @@ function MyRecipes() {
   },[])
 
   const deck = myRecipies.map((recipe) => (
-    <FoodCard 
+    <MyRecipeCard 
       key={recipe.id}
+      recipes={recipe}
       id={recipe.id}
       image={recipe.image}
       name={recipe.name}
