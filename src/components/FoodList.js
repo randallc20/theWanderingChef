@@ -4,7 +4,7 @@ import Container from "react-bootstrap/Container";
 import Row from 'react-bootstrap/Row';
 
 function FoodList({ foods, onCardChange }) {
-  console.log(foods);
+  //console.log(foods);
   const foodInfo = foods.map((food) => {
     return (
       <FoodCard
