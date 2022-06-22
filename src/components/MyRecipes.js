@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import FoodCard from "./FoodCard";
 import Container from "react-bootstrap/Container";
 import Row from 'react-bootstrap/Row';
+import Favorites from './Favorites';
 
 function MyRecipes() {
   const[myRecipies, setMyRecipes] = useState([])

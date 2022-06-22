@@ -9,7 +9,7 @@ body {
   }
   
   .container {
-    overflow: hidden;
+    /* overflow: hidden; */
     display: flex !important;
     flex-direction: column;
     justify-content: center;
