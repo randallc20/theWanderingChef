@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Header from "./Header";
 import NavBar from "./NavBar";
 import Home from "./Home";
+import RecipeOfTheDay from "./RecipeOfTheDay";
 import MyRecipes from "./MyRecipes";
 import Favorites from "./Favorites";
 import CreateForm from "./CreateForm";
@@ -39,8 +40,7 @@ function App() {
     if(e.target.textContent === "★ Favorite")
     setFavorites(favorites.filter(favorite => favorite.label !== recipeToRemove.label))
   }
-
-  console.log(favorites);
+  //console.log(favorites);
   return (
     <div className="app">
       <Header />
@@ -62,6 +62,9 @@ function App() {
         </Route>
         <Route path="/myrecipes">
           <MyRecipes />
+        </Route>
+        <Route path="/recipeoftheday">
+          <RecipeOfTheDay foods={foods}/>
         </Route>
       </Switch>
     </div>
