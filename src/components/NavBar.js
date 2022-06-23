@@ -60,9 +60,16 @@ function NavBar() {
                   My Recipes
                 </NavLink>
               </li>
-              <li className="nav-item" id="search-box">
-                <label id="search-label" htmlFor="search">Search: </label>
-                <input type="text" placeholder="Type to search..." />
+              <li className="nav-item">
+                <NavLink
+                  exact
+                  to="/recipeoftheday"
+                  activeClassName="active"
+                  className="nav-links"
+                  onClick={handleClick}
+                >
+                  Recipe of the Day!
+                </NavLink>
               </li>
             </ul>
             <div className="nav-icon" onClick={handleClick}>

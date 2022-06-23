@@ -15,7 +15,6 @@ function MyRecipes() {
   const deck = myRecipies.map((recipe) => (
     <MyRecipeCard 
       key={recipe.id}
-      recipes={recipe}
       id={recipe.id}
       image={recipe.image}
       name={recipe.name}
