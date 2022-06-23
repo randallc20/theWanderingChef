@@ -34,7 +34,7 @@ function App() {
         setFavorites([...favorites, recipeToAdd])
         setInFavs(!inFavs)
       }
-      alert("Added to Favorites")
+      alert(`Added ${recipeToAdd.label} to Favorites`)
     }
   }
 
