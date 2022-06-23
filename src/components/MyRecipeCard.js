@@ -2,7 +2,15 @@ import React from 'react'
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 
-function MyRecipeCard({image, name, ingredient}) {
+function MyRecipeCard({recipes, image, name, ingredient, onDeleteItem}) {
+
+  function onDeleteClick(id) {
+    fetch('http://localhost:3001/recipes/' + id, {
+      method: "DELETE"
+    })
+    .then(res => res.json())
+    .then(() => onDeleteItem(recipes))
+  }
   return (
     <Card id="card" style={{ width: "18rem" }}>
       <Card.Img variant="top" src={image} />
@@ -16,7 +24,7 @@ function MyRecipeCard({image, name, ingredient}) {
         <Button variant="primary" id="card-btn">
           Recipe
         </Button>
-        <Button variant="primary" id="card-btn">
+        <Button variant="primary" id="card-btn" onClick={() => onDeleteClick(recipes.id)}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"

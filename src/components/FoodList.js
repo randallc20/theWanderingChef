@@ -15,7 +15,7 @@ function FoodList({ foods, onCardChange }) {
     );
   });
   return (
-    <Container>
+    <Container id="card-container">
       <Row xs={1} md={2} className="g-4">
         {foodInfo}
       </Row>

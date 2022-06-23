@@ -7,7 +7,7 @@
   font-size: 1.2rem;
   position: sticky;
   top: 0;
-  z-index: 20;
+  z-index: 4;
 }
 
 .nav-container {
@@ -27,13 +27,15 @@
   text-decoration: none;
   font-size: 2rem;
   flex-grow: 1;
+  font-family: Merriweather;
 }
 
 .nav-menu {
   display: flex;
   list-style: none;
   text-align: center;
-  margin-right: auto;
+  margin-right: 2rem;
+  margin-top: 4vh;
 }
 
 .nav-links {
