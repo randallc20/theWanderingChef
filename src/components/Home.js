@@ -21,7 +21,7 @@ function Home({foods, onCardChange, setQuery}) {
         value={search}
         onChange={(e) => setSearch(e.target.value)}
       />
-      <button type="submit">🔍</button>
+      <button id="search-btn" type="submit">🔍</button>
     </form>
 
     <div>

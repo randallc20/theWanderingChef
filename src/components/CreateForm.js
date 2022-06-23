@@ -10,7 +10,7 @@ function CreateForm() {
   const [category, setCategory] = useState("")
 
   function handleSubmit(e) {
-    e.preventDefault()
+    e.preventDefault();
     fetch('http://localhost:3001/recipes', {
       method:'POST',
       headers: {'Content-type': 'application/json'}, 
@@ -25,13 +25,18 @@ function CreateForm() {
     })
     .then(resp => resp.json())
     .then(data => console.log(data))
-    //setName("")
+    setDescription("")
+    setName("")
+    setImage("")
+    setIngredients("")
+    setSeason("")
+    setCategory("")
   }
 
   return (
     <div className="container">
-      <form onSubmit={(e) => handleSubmit(e)}>
-        <h1>Create Recipe</h1>
+      <form id="form" onSubmit={handleSubmit}>
+        <h1 id="form-header">Create Your Own Recipe</h1>
         <div className="ui divider"></div>
         <div className="ui form">
           <div className="field">
@@ -42,6 +47,7 @@ function CreateForm() {
               id="name"
               name="name"
               placeholder='Add recipe name...'
+              value={name}
               onChange={(e) => setName(e.target.value)}
             />
           </div>
@@ -53,6 +59,7 @@ function CreateForm() {
               id="description"
               name="description"
               placeholder='Add item description...'
+              value={description}
               onChange={(e) => setDescription(e.target.value)}
             />
           </div>
@@ -64,6 +71,7 @@ function CreateForm() {
               id="ingredients"
               name="ingredients"
               placeholder='Add ingredients...'
+              value={ingredients}
               onChange={(e) => setIngredients(e.target.value)}
             />
           </div>
@@ -75,6 +83,7 @@ function CreateForm() {
               id="image"
               name="image"
               placeholder='Add item image link'
+              value={image}
               onChange={(e) => setImage(e.target.value)}
             />
           </div>
@@ -86,6 +95,7 @@ function CreateForm() {
               id="season"
               name="season"
               placeholder='Add season'
+              value={season}
               onChange={(e) => setSeason(e.target.value)}
             />
           </div>
@@ -97,6 +107,7 @@ function CreateForm() {
               id="category"
               name="category"
               placeholder='Add category'
+              value={category}
               onChange={(e) => setCategory(e.target.value)}
             />
           </div>

@@ -12,6 +12,10 @@ function MyRecipes() {
     .then(data => setMyRecipes(data))
   },[])
 
+  function handleDeleteItem(deletedItem) {
+    setMyRecipes(myRecipies.filter(recipe => recipe.id !== deletedItem.id))
+  }
+
   const deck = myRecipies.map((recipe) => (
     <MyRecipeCard 
       key={recipe.id}
@@ -20,6 +24,7 @@ function MyRecipes() {
       image={recipe.image}
       name={recipe.name}
       ingredients={recipe.ingredients}
+      onDeleteItem={handleDeleteItem}
     />
   ))
 
