@@ -13,8 +13,7 @@ function FoodList({ foods, onCardChange }) {
         key={food.recipe.label}
         recipes={food.recipe}
         onCardChange={onCardChange}
-        onStarClick={onStarClick}
-        toggle={toggle}
+        
       />
     );
   });
