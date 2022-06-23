@@ -64,7 +64,7 @@ function App() {
           <MyRecipes />
         </Route>
         <Route path="/recipeoftheday">
-          <RecipeOfTheDay foods={foods}/>
+        <RecipeOfTheDay/>
         </Route>
       </Switch>
     </div>

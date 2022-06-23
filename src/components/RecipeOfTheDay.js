@@ -28,7 +28,7 @@ function RecipeOfTheDay() {
         title="Waffle Wednesday Presents..."
     }
     else if(dayOfWeek===4){
-        query="thirsty"
+        query="cocktail"
         title="Thirsty Thursday Presents..."
     }
     else if(dayOfWeek===5){
@@ -56,10 +56,18 @@ function RecipeOfTheDay() {
         );
       });
 
+      function getRandom(arr){
+        const randomIndex = Math.floor(Math.random() * arr.length);
+        const item = arr[randomIndex];
+        return item
+      }
+
+      const randomRecipe = getRandom(todaysFood)
+
   return (
     <div id="RoD-card">
       <h1 id="RoD-title">{title}</h1>
-        {todaysFood}
+        {randomRecipe}
     </div>
   )
 }
