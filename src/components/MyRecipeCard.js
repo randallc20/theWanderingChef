@@ -2,7 +2,7 @@ import React from 'react'
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 
-function MyRecipeCard({recipes, image, name, ingredient, onDeleteItem}) {
+function MyRecipeCard({recipes, image, name, onDeleteItem}) {
 
   function onDeleteClick(id) {
     fetch('http://localhost:3001/recipes/' + id, {
@@ -20,7 +20,12 @@ function MyRecipeCard({recipes, image, name, ingredient, onDeleteItem}) {
             {name}
           </strong>
         </Card.Title>
-        <Card.Text>{ingredient}</Card.Text>
+        <Card.Text id="card-text">
+          {recipes.description}
+          <br/>
+          <br/>
+          {recipes.ingredients}
+        </Card.Text>
         <Button variant="primary" id="card-btn">
           Recipe
         </Button>

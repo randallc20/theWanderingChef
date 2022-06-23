@@ -20,6 +20,7 @@ function MyRecipes() {
     <MyRecipeCard 
       key={recipe.id}
       id={recipe.id}
+      recipes={recipe}
       image={recipe.image}
       name={recipe.name}
       ingredients={recipe.ingredients}
