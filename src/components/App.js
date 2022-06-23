@@ -13,7 +13,7 @@ function App() {
   const [foods, setFoods] = useState([]);
 
   const [favorites, setFavorites] = useState([])
-  const [query, setQuery] = useState("bread")
+  const [query, setQuery] = useState("soup")
 
   const APP_key = '61764b76dc6ac804b499eb583ff38f67'
   const APP_ID = '96a63b8b'
@@ -26,7 +26,7 @@ function App() {
   },[query])
 
   function handleCardChange(e, recipeToAdd) {
-    if (e.target.textContent !== "Trash" && e.target.textContent === "★ Favorites") {
+    if (e.target.textContent === "★ Favorite") {
       const addToFavs = favorites.find(
         (recipe) => recipe.label === recipeToAdd.label
       );
@@ -36,10 +36,9 @@ function App() {
     }
   }
 
-  const [toggle, setToggle] = useState(false);
-
-  function handleStarClick() {
-    setToggle(!toggle);
+  function handleRemove(e, recipeToRemove) {
+    if(e.target.textContent === "★ Favorite")
+    setFavorites(favorites.filter(favorite => favorite.label !== recipeToRemove.label))
   }
   //console.log(favorites);
   return (
@@ -56,7 +55,7 @@ function App() {
               />
         </Route>
         <Route path="/favorites">
-          <Favorites favorites={favorites} />
+          <Favorites favorites={favorites} handleRemove={handleRemove} />
         </Route>
         <Route path="/create">
           <CreateForm />
