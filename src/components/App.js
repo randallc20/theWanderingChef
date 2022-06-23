@@ -11,7 +11,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   const [foods, setFoods] = useState([]);
-
+  const [inFavs, setInFavs] = useState(false)
   const [favorites, setFavorites] = useState([])
   const [query, setQuery] = useState("soup")
 
@@ -31,13 +31,15 @@ function App() {
         (recipe) => recipe.label === recipeToAdd.label
       );
       if (!addToFavs) {
-        setFavorites([...favorites, recipeToAdd]);
+        setFavorites([...favorites, recipeToAdd])
+        setInFavs(!inFavs)
       }
+      alert("Added to Favorites")
     }
   }
 
   function handleRemove(e, recipeToRemove) {
-    if(e.target.textContent === "★ Favorite")
+    if(e.target.textContent === "Remove")
     setFavorites(favorites.filter(favorite => favorite.label !== recipeToRemove.label))
   }
   //console.log(favorites);
@@ -52,10 +54,11 @@ function App() {
               foods={foods} 
               onCardChange={handleCardChange}
               setQuery={setQuery}
+              inFavs={inFavs} 
               />
         </Route>
         <Route path="/favorites">
-          <Favorites favorites={favorites} handleRemove={handleRemove} />
+          <Favorites favorites={favorites} handleRemove={handleRemove} inFavs={inFavs} />
         </Route>
         <Route path="/create">
           <CreateForm />
