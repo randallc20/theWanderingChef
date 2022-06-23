@@ -75,3 +75,16 @@
   height: 2.5rem;
   width: 1.75rem;
 }
+
+#RoD-title {
+  font-family: Merriweather;
+  text-align: center;
+  color: gold;
+}
+
+#RoD-card{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

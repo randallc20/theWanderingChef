@@ -57,8 +57,8 @@ function RecipeOfTheDay() {
       });
 
   return (
-    <div>
-        {title}
+    <div id="RoD-card">
+      <h1 id="RoD-title">{title}</h1>
         {todaysFood}
     </div>
   )

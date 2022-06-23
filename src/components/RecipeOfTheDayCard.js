@@ -5,7 +5,7 @@ import Button from "react-bootstrap/Button";
 function RecipeOfTheDayCard({recipes}) {
   return (
     <Card
-    id="card"
+    id="RoD"
     style={{ width: "18rem" }}
   >
     <Card.Img variant="top" src={recipes.image} />
