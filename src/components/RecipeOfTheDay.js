@@ -45,7 +45,7 @@ function RecipeOfTheDay() {
         .then(res => res.json())
         .then(data => setFoods(data.hits))
         .catch(err => console.error(err));
-      },[])
+      },[query])
 
       const todaysFood = foods.map((food) => {
         return (
