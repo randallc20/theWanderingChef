@@ -2,7 +2,7 @@ import React from "react";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 
-function FoodCard({ recipes, onCardChange, onStarClick, inFavs }) {
+function FoodCard({ recipes, onCardChange, onStarClick }) {
   return (
     <Card
       id="card"
@@ -23,7 +23,7 @@ function FoodCard({ recipes, onCardChange, onStarClick, inFavs }) {
           Recipe
         </Button>
         <Button variant="primary" id="card-btn">
-          {inFavs ? "Remove" : "★ Favorite"}
+           ★ Favorite
         </Button>
       </Card.Body>
     </Card>

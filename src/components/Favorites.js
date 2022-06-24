@@ -3,9 +3,10 @@ import FoodCard from "./FoodCard";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 
-function Favorites({ favorites, handleRemove, inFavs }) {
+function Favorites({favorites, handleRemove}) {
+  console.log(favorites)
   const favInfo = favorites.map((favorite) => {
-    return <FoodCard key={favorite.label + "favorites"} recipes={favorite} onCardChange={handleRemove} inFavs={inFavs} />;
+    return <FoodCard key={favorite.label + "favorites"} recipes={favorite} onCardChange={handleRemove} />;
   });
   return (
     <Container>
