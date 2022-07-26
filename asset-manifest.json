@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/theWanderingChef/static/css/main.c803fe0c.css",
+    "main.js": "/theWanderingChef/static/js/main.4bf49cab.js",
+    "index.html": "/theWanderingChef/index.html",
+    "main.c803fe0c.css.map": "/theWanderingChef/static/css/main.c803fe0c.css.map",
+    "main.4bf49cab.js.map": "/theWanderingChef/static/js/main.4bf49cab.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c803fe0c.css",
+    "static/js/main.4bf49cab.js"
+  ]
+}
